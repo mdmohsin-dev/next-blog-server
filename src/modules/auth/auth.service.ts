@@ -1,4 +1,3 @@
-import type { Prisma } from "../../../generated/prisma/browser";
 import { prisma } from "../../../lib/prisma";
 
 const loginWithEmailAndPassword = async ({ email, password }: { email: string, password: string }) => {
@@ -20,21 +19,23 @@ const loginWithEmailAndPassword = async ({ email, password }: { email: string, p
     }
 }
 
-const authWithGoogle = async (data: Prisma.UserCreateInput) => {
+const authWithGoogle = async (data: { email: string; name?: string; picture?: string }) => {
     let user = await prisma.user.findUnique({
-        where: {
-            email: data.email
-        }
-    })
+        where: { email: data.email }
+    });
 
     if (!user) {
         user = await prisma.user.create({
-            data
-        })
+            data: {
+                email: data.email,
+                name: data.name ?? null,
+                picture: data.picture ?? null,
+            }
+        });
     }
 
     return user;
-}
+};
 
 export const AuthService = {
     loginWithEmailAndPassword,

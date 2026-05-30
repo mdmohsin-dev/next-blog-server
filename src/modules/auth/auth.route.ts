@@ -12,5 +12,4 @@ router.post(
     AuthController.authWithGoogle
 )
 
-
-export const AuthRouter:Router = router;
+export const AuthRouter: Router = router;
