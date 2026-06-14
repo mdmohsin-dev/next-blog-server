@@ -4,11 +4,10 @@
   "description": "",
   "main": "dist/server.js",
   "scripts": {
-  "dev": "tsx watch src/server.ts",
-  "build": "tsc",
-  "start": "tsx src/server.ts"
-}
-,
+    "dev": "ts-node-dev src/server.ts",
+    "start": "ts-node src/server.ts",
+    "postinstall": "prisma generate"
+  },
   "keywords": [],
   "author": "",
   "type": "module",
