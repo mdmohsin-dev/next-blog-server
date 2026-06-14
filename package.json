@@ -12,7 +12,7 @@
     "db:pull": "prisma db pull --schema=./prisma/",
     "db:studio": "prisma studio --schema=./prisma/",
     "postinstall": "prisma generate --schema=./prisma/",
-    "start": "ts-node src/server.ts"
+    "start": "node dist/src/server.js"
   },
   "keywords": [],
   "author": "",
