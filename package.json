@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/server.js",
-   "scripts": {
+  "scripts": {
   "dev": "tsx watch src/server.ts",
   "build": "tsc",
-  "start": "node dist/server.js"
+  "start": "tsx src/server.ts"
 }
 ,
   "keywords": [],
