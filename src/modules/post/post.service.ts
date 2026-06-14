@@ -73,7 +73,7 @@ const getAllPosts = async ({
 };
 
 const getPostById = async (id: number) => {
-    return await prisma.$transaction(async (tx) => {
+    return await prisma.$transaction(async (tx:Prisma.TransactionClient) => {
         await tx.post.update({
             where: { id },
             data: {
@@ -100,7 +100,7 @@ const deletePost = async (id: number) => {
 
 
 const getBlogStat = async () => {
-    return await prisma.$transaction(async (tx) => {
+    return await prisma.$transaction(async (tx:Prisma.TransactionClient) => {
         const aggregates = await tx.post.aggregate({
             _count: true,
             _sum: { views: true },
