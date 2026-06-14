@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tsx watch src/server.ts",
-    "build": "tsc",
-    "start": "node dist/server.js"
-  },
+   "scripts": {
+  "dev": "tsx watch src/server.ts",
+  "build": "echo 'no build needed'",
+  "start": "tsx src/server.ts"
+}
+,
   "keywords": [],
   "author": "",
   "type": "module",
