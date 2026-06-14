@@ -5,8 +5,8 @@
   "main": "dist/server.js",
    "scripts": {
   "dev": "tsx watch src/server.ts",
-  "build": "echo 'no build needed'",
-  "start": "tsx src/server.ts"
+  "build": "tsc",
+  "start": "node dist/server.js"
 }
 ,
   "keywords": [],
