@@ -1,4 +1,4 @@
-import { prisma } from "../../../lib/prisma"
+import { prisma } from "../../../lib/prisma.js"
 import type { Prisma, User } from "../../../generated/prisma/client"
 
 const createUser = async (payload: Prisma.UserCreateInput): Promise<User> => {

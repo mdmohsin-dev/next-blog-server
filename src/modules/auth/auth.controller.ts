@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import { AuthService } from "./auth.service";
+import { AuthService } from "./auth.service.js";
 
 const loginWithEmailAndPassword = async (req: Request, res: Response) => {
     try {

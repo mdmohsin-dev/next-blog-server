@@ -1,4 +1,4 @@
-import { prisma } from "../../../lib/prisma";
+import { prisma } from "../../../lib/prisma.js";
 
 const loginWithEmailAndPassword = async ({ email, password }: { email: string, password: string }) => {
     const user = await prisma.user.findUnique({
