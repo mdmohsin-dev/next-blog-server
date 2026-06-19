@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "outDir": "./dist",
-    "rootDir": ".",
+    "rootDir": "./src",
     "module": "esnext",
     "moduleResolution": "bundler",
     "target": "es2023",
@@ -22,5 +22,5 @@
     "skipLibCheck": true
   },
   "include": ["src/**/*","lib/**/*"],
-  "exclude": ["node_modules", "dist", "generated"]
+  "exclude": ["node_modules", "generated"]
 }
