@@ -1,4 +1,4 @@
-import type { Post, Prisma } from "../../../generated/prisma/client";
+import type { Post, Prisma } from "../../../generated/prisma/client.js";
 import { prisma } from "../../../lib/prisma.js";
 
 const createPost = async (payload: Prisma.PostCreateInput): Promise<Post> => {
