@@ -1,22 +1,49 @@
 {
   "compilerOptions": {
-    "outDir": "./dist",
-    "rootDir": ".",
+    /* Language */
+    "target": "ES2023",
+    "lib": [
+      "ES2023"
+    ],
+    /* Modules */
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "target": "ES2023",
+    /* Project Structure */
+    "rootDir": "./src",
+    "outDir": "./dist",
+    /* Interop */
     "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    /* Types */
+    "types": [
+      "node"
+    ],
+    /* Output */
     "sourceMap": true,
     "declaration": true,
     "declarationMap": true,
+    /* Type Checking */
     "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    /* Module */
     "isolatedModules": true,
-    "moduleDetection": "force",
+    "verbatimModuleSyntax": true,
+    /* Misc */
     "skipLibCheck": true,
-    "types": ["node"]
+    "forceConsistentCasingInFileNames": true,
+    /* TS */
+    "ignoreDeprecations": "6.0"
   },
-  
-  "include": ["src/**/*", "lib/**/*", "prisma/**/*"],
-  "exclude": ["node_modules", "prisma/generated"]
-
+  "include": [
+    "src/**/*",
+    "prisma.config.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "prisma.config.ts"
+  ]
 }

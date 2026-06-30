@@ -7,11 +7,11 @@ CREATE TYPE "UserStatus" AS ENUM ('ACTIVE', 'INACTIVE', 'BLOCK');
 -- CreateTable
 CREATE TABLE "User" (
     "id" SERIAL NOT NULL,
-    "name" TEXT NOT NULL,
+    "name" TEXT,
     "email" TEXT NOT NULL,
     "password" TEXT,
     "role" "Role" NOT NULL DEFAULT 'USER',
-    "phone" TEXT NOT NULL,
+    "phone" TEXT,
     "picture" TEXT,
     "status" "UserStatus" NOT NULL DEFAULT 'ACTIVE',
     "isVerified" BOOLEAN NOT NULL DEFAULT false,

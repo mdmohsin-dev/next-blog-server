@@ -1,5 +1,5 @@
 import type { Request, Response } from "express";
-import { PostService } from "./post.service.js";
+import { PostService } from "./post.service.ts";
 
 const createPost = async (req: Request, res: Response) => {
     try {

@@ -1,5 +1,5 @@
-import { prisma } from "../../../lib/prisma.js"
-import type { User, Prisma } from "../../../prisma/generated/prisma/client.js";
+import type { Prisma, User } from "../../generated/prisma/client.ts"
+import { prisma } from "../../lib/prisma.ts"
 
 const createUser = async (payload: Prisma.UserCreateInput): Promise<User> => {
     const createdUser = await prisma.user.create({
