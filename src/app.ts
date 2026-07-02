@@ -19,9 +19,9 @@ app.use(compression()); // Compresses response bodies for faster delivery
 app.use(express.json()); // Parse incoming JSON requests
 
 
-app.use("/api/v1/user", UserRouter);
-app.use("/api/v1/post", PostRouter);
-app.use("/api/v1/auth", AuthRouter);
+app.use("/user", UserRouter);
+app.use("/post", PostRouter);
+app.use("/auth", AuthRouter);
 
 // Default route for testing
 app.get("/", (_req, res) => {
